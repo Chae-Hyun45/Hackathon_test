@@ -11,7 +11,7 @@
 import express, { Express, Request, Response, NextFunction } from 'express'
 import cors from 'cors'
 import { config } from '@config/env.js'
-import tasksRouter from '@routes/tasks'
+import tasksRouter from '@routes/tasks.js'
 import { errorHandler } from '@middlewares/errorHandler'
 
 
