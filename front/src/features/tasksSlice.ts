@@ -11,6 +11,8 @@
 import { createSlice, PayloadAction, createAsyncThunk } from '@reduxjs/toolkit'
 import { fetchTasks, createTask, toggleTask, deleteTask, Task } from '@api/tasks'
 
+export type { Task };
+
 export interface TasksState {
   items: Task[]
   loading: boolean
