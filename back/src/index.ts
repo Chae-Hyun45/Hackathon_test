@@ -8,12 +8,13 @@
  * 5. Start server on PORT from environment (default 3000)
  * 6. Log server startup info
  */
-
+import 'module-alias/register';
 import express, { Express, Request, Response, NextFunction } from 'express'
 import cors from 'cors'
 import { config } from '@config/env'
 import tasksRouter from '@routes/tasks'
 import { errorHandler } from '@middlewares/errorHandler'
+
 
 const app: Express = express()
 
