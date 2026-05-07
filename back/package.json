@@ -6,7 +6,7 @@
   "type": "module",
   "scripts": {
     "dev": "tsx watch src/index.ts",
-    "build": "tsc",
+    "build": "tsc && tsc-alias",
     "start": "node dist/index.js",
     "lint": "eslint . --ext .ts",
     "format": "prettier --write .",
@@ -30,14 +30,5 @@
     "typescript": "^5.0.0",
     "tsx": "^3.12.0",
     "vitest": "^1.0.0"
-  },
-  "_moduleAliases": {
-  "@": "dist",
-  "@config": "dist/config",
-  "@controllers": "dist/controllers",
-  "@models": "dist/models",
-  "@services": "dist/services",
-  "@routes": "dist/routes",
-  "@middlewares": "dist/middlewares"
-}
+  }
 }
