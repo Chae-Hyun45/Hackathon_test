@@ -1,0 +1,79 @@
+/*
+ * Copilot Prompt:
+ * Create CSS modules for each component with Toss-style design:
+ * 1. Use CSS variables from global styles
+ * 2. Implement glassmorphism effect where appropriate
+ * 3. Add smooth animations and transitions
+ * 4. Ensure mobile-responsive layouts
+ * 5. Use flexbox/grid for layout
+ * 6. Implement hover and focus states
+ */
+
+/* Header.module.css */
+.header {
+  background: linear-gradient(135deg, var(--color-bg-secondary) 0%, var(--color-bg) 100%);
+  border-bottom: 1px solid var(--color-border);
+  padding: var(--space-lg) var(--space-md);
+  box-shadow: var(--shadow-sm);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: var(--space-lg);
+}
+
+.titleSection {
+  flex: 1;
+}
+
+.title {
+  font-size: var(--font-size-2xl);
+  font-weight: 700;
+  color: var(--color-text-primary);
+  margin-bottom: var(--space-sm);
+}
+
+.subtitle {
+  font-size: var(--font-size-sm);
+  color: var(--color-text-secondary);
+  margin: 0;
+}
+
+.themeToggle {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background-color: var(--color-bg-secondary);
+  border: 1px solid var(--color-border);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: var(--font-size-lg);
+  transition: all var(--transition-fast);
+}
+
+.themeToggle:hover {
+  background-color: var(--color-accent-light);
+  transform: scale(1.05);
+}
+
+.themeToggle:active {
+  transform: scale(0.95);
+}
+
+@media (max-width: 640px) {
+  .container {
+    gap: var(--space-md);
+  }
+
+  .title {
+    font-size: var(--font-size-xl);
+  }
+}

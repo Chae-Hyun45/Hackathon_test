@@ -1,0 +1,54 @@
+/* App.css */
+.app {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  transition: background-color var(--transition-base), color var(--transition-base);
+}
+
+.app.light {
+  background-color: var(--color-bg);
+  color: var(--color-text-primary);
+}
+
+.app.dark {
+  background-color: var(--color-bg);
+  color: var(--color-text-primary);
+}
+
+.app-container {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.main-content {
+  flex: 1;
+  padding: var(--space-lg) var(--space-md);
+  max-width: 1024px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.loading,
+.error {
+  text-align: center;
+  padding: var(--space-2xl) var(--space-lg);
+  font-size: var(--font-size-lg);
+  border-radius: var(--radius-lg);
+}
+
+.loading {
+  color: var(--color-text-secondary);
+}
+
+.error {
+  background-color: rgba(244, 67, 54, 0.1);
+  color: var(--color-error);
+}
+
+@media (max-width: 640px) {
+  .main-content {
+    padding: var(--space-md);
+  }
+}
