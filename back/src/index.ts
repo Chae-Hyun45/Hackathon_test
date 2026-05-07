@@ -10,8 +10,8 @@
  */
 import express, { Express, Request, Response, NextFunction } from 'express'
 import cors from 'cors'
-import { config } from '@config/env.js'
-import tasksRouter from '@routes/tasks.js'
+import { config } from '@config/env'
+import tasksRouter from '@routes/tasks'
 import { errorHandler } from '@middlewares/errorHandler'
 
 
