@@ -4,8 +4,16 @@
     "useDefineForClassFields": true,
     "lib": ["ES2020", "DOM", "DOM.Iterable"],
     "module": "ESNext",
+    "moduleResolution": "bundler", 
+    
+    /* 1. JSX 에러 해결을 위해 반드시 추가 (가장 중요) */
+    "jsx": "react-jsx", 
+    
+    /* 2. Vite 환경에서 빌드 시 권장되는 추가 설정 */
+    "isolatedModules": true,   /* 각 파일을 독립된 모듈로 변환 (Vite 필수) */
+    "noEmit": true,            /* tsc가 파일을 생성하지 않고 검사만 하도록 설정 (Vite가 빌드 담당) */
+    "allowImportingTsExtensions": true, /* .tsx 확장자를 가진 파일 import 허용 */
 
-    "moduleResolution": "bundler",
     "skipLibCheck": true,
     "esModuleInterop": true,
     "allowSyntheticDefaultImports": true,
